@@ -24,12 +24,13 @@ public class App {
   }
 
   // Tim index cua phan tu
-  private static boolean findIndexByValue(int value, int[] arr) {
-    for (int item : arr) {
-      if (item == value)
-        return true;
+  private static int findIndexByValue(int value, int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == value){
+        return i;
+      }
     }
-    return false;
+    return -1;
   }
 
   public static void main(String[] args) {
@@ -49,8 +50,8 @@ public class App {
     System.out.println(Arrays.toString(array));
 
     // find item by index
-    boolean isFound = findIndexByValue(10, array);
-    if(isFound) System.out.println("FOUND");
+    int index = findIndexByValue(10, array);
+    if(index > 0) System.out.println("FOUND");
     else System.out.println("NOT FOUND");
   }
 }
