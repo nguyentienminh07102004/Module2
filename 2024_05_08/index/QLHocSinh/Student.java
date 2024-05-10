@@ -48,5 +48,4 @@ public class Student {
     return "[id=" + id + ", fullName=" + fullName + ", email=" + email + ", GPA=" + GPA + "]";
   }
 
-  
 }
